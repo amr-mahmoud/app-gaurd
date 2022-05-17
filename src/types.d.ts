@@ -11,7 +11,7 @@ export type Plugin = {
   description: string;
 };
 
-export const TabName = "marketing" | "finance" | "personnel";
+export const TabName: string = "marketing" | "finance" | "personnel";
 
 export type TabGroup = Record<TabName, Tab>;
-export type PluginsGroup = Record<string, Plugin> | {};
+export type PluginsGroup = Record<string, Plugin>;

@@ -1,10 +1,4 @@
-import {
-  Children,
-  createContext,
-  Dispatch,
-  ReactElement,
-  useReducer,
-} from "react";
+import { createContext, Dispatch, ReactElement, useReducer } from "react";
 import { initState, InitialStateType } from "./initState";
 import reducer from "../reducer";
 

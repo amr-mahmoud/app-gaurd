@@ -1,7 +1,7 @@
 import Router from "./router";
-import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import AppProvider from "./store/provider";
+import "antd/dist/antd.css";
 
 function App() {
   return (
