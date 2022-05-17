@@ -23,14 +23,14 @@ const Sidebar = ({ tabs: tabsId }: { tabs: string[] }) => {
   const navigate = useNavigate();
 
   const path = pathname.split("/")[1];
-
+  const targetPath = tabs[path];
   const activeFlag = useCallback(() => {
-    const activeLength = tabs[path]?.active?.length;
-    const inactiveLength = tabs[path]?.inactive?.length;
-    const disabledLength = tabs[path]?.disabled?.length;
+    const activeLength = targetPath?.active?.length;
+    const inactiveLength = targetPath?.inactive?.length;
+    const disabledLength = targetPath?.disabled?.length;
     if (disabledLength !== activeLength + inactiveLength) return true;
     return false;
-  }, [tabs[path]])();
+  }, [targetPath])();
 
   const onSwitchHandler = async () => {
     let tab = { ...tabs[path] };
