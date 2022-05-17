@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Tab } from "../types";
 
-const baseurl = "http://localhost:2233";
+const baseurl = "https://jade-sundae-029fa8.netlify.app/.netlify/functions/api";
 
 const getPlugins = async () => {
   const res = await axios.get(`${baseurl}/plugins`);
